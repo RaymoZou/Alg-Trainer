@@ -4,6 +4,56 @@ body {
     color: white;
 }
 
+.scramble-container {
+    grid-column: 1/-1;
+}
+
+.alg-container {
+}
+
+.alg-credits-container {
+    grid-row-start: 4;
+}
+
+.settings-container {
+}
+
+.sim-cube-container {
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cube-scramble-img-container {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cube-scramble-img-container .timer-container {
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-container {
+}
+
+.instructions-container {
+    grid-column-start: 3; 
+    text-align: left;
+}
+
+.document {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 p {
     font-family: Arial;
     font-size: 20px;
@@ -65,6 +115,19 @@ th, td, tr{
     text-align: center;
     float: left;
     width: 30%;
+}
+
+.column_right .flat-3D-desc {
+    font-size: small;
+}
+
+.column_right .times-container {
+    
+    height: 150px;
+}
+
+#timeList {
+    text-align: left;
 }
 
 .algsetpicker{
@@ -130,8 +193,10 @@ a:visited {
 }
 
 #page {
-    display: none;
-
+    /* display: none; */
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #controls {   
@@ -154,8 +219,8 @@ a:visited {
 }
 
 
-border-top: 16px solid blue;
+/* border-top: 16px solid blue;
 border-right: 16px solid green;
 border-bottom: 16px solid red;
-border-left: 16px solid yellow;
+border-left: 16px solid yellow; */
 
