@@ -253,7 +253,9 @@ cubeType.addEventListener("change", function(){
 });
 
 var algsetpicker = document.getElementById("algsetpicker");
+var algsetbutton = document.getElementById("alg-button");
 algsetpicker.addEventListener("change", function(){
+    algsetbutton.textContent = algsetpicker.value;
     createCheckboxes();
 	shouldRecalculateStatistics = true;
     localStorage.setItem("algsetpicker", this.value);
@@ -1145,8 +1147,12 @@ function createCheckboxes(){
         }
         checkBox.setAttribute("id", set.toLowerCase() +  subsets[i]);
 
-        myDiv.appendChild(checkBox);
-        myDiv.appendChild(label);
+        var checkbox_item = document.createElement('div');
+        checkbox_item.classList.add('checkbox-item');
+        checkbox_item.appendChild(checkBox);
+        checkbox_item.appendChild(label);
+
+        myDiv.appendChild(checkbox_item);
         label.appendChild(document.createTextNode(subsets[i]));
     }
 }

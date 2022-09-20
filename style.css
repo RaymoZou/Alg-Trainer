@@ -8,14 +8,62 @@ body {
     grid-column: 1/-1;
 }
 
-.alg-container {
+.button-container {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.button-container > button {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #51557E; 
+    border: none;
+    color: white;
+}
+
+.button-container > button:active {
+    background-color: #363954;
+}
+
+.alg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.alg-container .checkbox-container {
+    border-radius: 8px;
+    padding: 32px;
+    background-color: #273B4A;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.alg-container > .alg-button {
+    justify-self: center;
+    border-radius: 8px;
+    font-size: 18px;
+    border: none;
+    background-color: #51557E;
+    color: white;
+    padding: 18px;
+}
+
+.alg-container > .alg-button:active {
+    background-color: #363954;
+}
+
+.checkbox-container .checkbox-item>input {
+    background-color: blue;
+}
+
 
 .alg-credits-container {
     grid-row-start: 4;
-}
-
-.settings-container {
 }
 
 .sim-cube-container {
@@ -35,13 +83,20 @@ body {
 }
 
 .cube-scramble-img-container .timer-container {
+    padding: 8px;
     width: 100%;
-    /* background-color: blue; */
+    border-radius: 8px;
+    background-color: #273B4A;
     display: flex;
     flex-direction: column;
 }
 
-.timer-container {
+.cube-scramble-img-container .timer-container button {
+    border-radius: 8px;
+    border: none;
+    background-color: #51557E;
+    color: white;
+    padding: 8px;
 }
 
 .instructions-container {
@@ -130,8 +185,29 @@ th, td, tr{
     text-align: left;
 }
 
-.algsetpicker{
-    width:70%;
+.algsetpicker {
+    font-size: 24px;
+    border-radius: 8px;
+    border: none;
+    width: 75%;
+    padding: 16px;
+    color: white;
+    background-color: #51557E;
+}
+
+.algsetpicker::-webkit-scrollbar {
+    width: 18px;
+}
+
+.algsetpicker::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: grey;
+}
+
+.algsetpicker::-webkit-scrollbar-track {
+    border-radius: 8px;
+    width: 36px;
+    background-color: beige;
 }
 
 a:link {
@@ -208,7 +284,8 @@ a:visited {
 }
 
 #controls > button {
-    background-color: grey; 
+    border-radius: 8px;
+    background-color: #51557E; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -218,7 +295,11 @@ a:visited {
     font-size: 16px;
 }
 
-#overlay {
+#controls > button:active {
+    background-color: #363954;
+}
+
+.overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%;
@@ -230,7 +311,14 @@ a:visited {
     background-color: rgba(0,0,0,0.5);
 }
 
-.settings-overlay {
+#alg-overlay .overlay-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-container {
     border-radius: 8px;
     padding: 32px;
     width: 40%;
